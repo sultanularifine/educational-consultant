@@ -107,7 +107,7 @@ class DestinationController extends Controller
             $destination->edu_image = 'edu_images/' . $edu_imagePath;
         }
         if ($destination->save()) {
-            return redirect()->route('destination.create');
+            return redirect()->route('destination.index');
         }
     }
 }
