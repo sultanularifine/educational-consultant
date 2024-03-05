@@ -14,10 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+Route::redirect('/', '/blog-cms');
 Route::get('/blog-cms', [BlogController::class, 'index'] )->name('blog.index');
 Route::get('/blog-cms/login', [BlogController::class, 'loginForm'] )->name('blog.loginForm');
 Route::get('/blog-cms/register', [BlogController::class, 'register'] )->name('blog.register');
@@ -30,7 +28,10 @@ Route::post('/blog-cms/upload', [BlogController::class, 'storeBlog'] )->name('bl
 Route::get('/blog-cms/{id}', [BlogController::class,'editBlog'])->name('blog.editBlog');
 Route::put('/blog-cms/{id}', [BlogController::class,'updateBlog'])->name('blog.updateBlog');
 Route::delete('/blog-cms/{id}', [BlogController::class,'destroyBlog'])->name('blog.destroyBlog');
-
-Route::get('/destination', [DestinationController::class, 'index'] )->name('destination.index');
-Route::get('/destination/view/{id}', [DestinationController::class, 'viewDest'] )->name('destination.viewDest');
+//destination route
+Route::get('/index', [DestinationController::class, 'index'] )->name('destination.index');
+Route::get('/destination', [DestinationController::class, 'create'] )->name('destination.create');
 Route::post('/destination', [DestinationController::class, 'store'] )->name('destination.store');
+Route::get('/destination/view/{id}', [DestinationController::class, 'viewDest'] )->name('destination.viewDest');
+Route::get('/edit/{id}', [DestinationController::class, 'edit'] )->name('destination.edit');
+Route::put('/update/{id}', [DestinationController::class, 'update'] )->name('destination.update');

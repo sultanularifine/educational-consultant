@@ -84,6 +84,13 @@
                                                     <textarea class="form-control summernote" id="summernote3" name="universities" rows="8" required></textarea>
                                                 </div>
                                             </div>
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <label class="form-label" for="form3Example4c">Image </label><br>
+                                                    <input type="file" id="img" name="edu_image" accept="image/*">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('required_docs')->nullable();
             $table->text('process')->nullable();
             $table->text('universities')->nullable();
+            $table->string('edu_image')->nullable();
             $table->timestamps();
         });
     }

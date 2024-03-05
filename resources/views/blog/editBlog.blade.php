@@ -54,7 +54,6 @@
             @else
                 <span></span>
             @endif
-
             </div>
             <div class="form-group">
                 <label for="content">Blog Content:</label>

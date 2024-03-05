@@ -33,6 +33,13 @@
                 <li class="nav-item">
                     <a class="nav-link text-info" href="{{ route('blog.register') }}">Register</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="{{ route('destination.create') }}">Data Entry</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="{{ route('destination.index') }}">Data list</a>
+                </li>
+                
             </ul>
         </div>
     </nav>
