@@ -9,7 +9,7 @@ class DestinationController extends Controller
 {
     public function index(Request $request)
     {
-        $perPage = 2; 
+        $perPage = 7; 
         $currentPage = $request->page ?? 1; 
         $offset = ($currentPage - 1) * $perPage; 
         
@@ -75,8 +75,7 @@ class DestinationController extends Controller
         }
     }
     public function update(Request $request, $id)
-    {
-        
+      {
         $request->validate([
             'category' => 'required',
             'country' => 'required',
@@ -88,7 +87,6 @@ class DestinationController extends Controller
             'edu_image' => 'required|image|mimes:jpeg,png,jpg,gif',
         ]);
         $destination = Destination::find($id);
-
         $destination->category = $request->category;
         $destination->country = $request->country;
         $destination->about = $request->about;
